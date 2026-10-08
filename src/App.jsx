@@ -24,7 +24,7 @@ export default function App() {
 
   return (
     <>
-      <audio ref={audioRef} src="/song.mp3" loop preload="auto" />
+      <audio ref={audioRef} src="./public/song/Ubhayakushala chirajeevana Policeodu movie song _vijaythalapathy _theri(MP3_160K).mp3" loop preload="auto" />
       <Petals />
       <AnimatePresence mode="wait">
         {!opened ? (
