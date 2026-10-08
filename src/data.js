@@ -16,11 +16,9 @@ export const WEDDING = {
       ["Mappillai Azhaippu", "5:00 PM"],
       ["Nichayathartham", "5:30 PM"],
       ["Reception", "7:00 PM onwards"],
-      ["Dinner", "7:30 PM"],
     ]},
     { day: "Sunday, 1 November 2026", items: [
-      ["Muhurtham", "6:00 – 7:30 AM (Viruchiga Lagnam)"],
-      ["Breakfast", "7:30 AM"],
+      ["Muhurtham", "6:00 – 7:30 AM"],
     ]},
   ],
 };
