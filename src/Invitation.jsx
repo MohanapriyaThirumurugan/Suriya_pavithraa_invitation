@@ -99,7 +99,7 @@ export default function Invitation() {
 
   <a
     className="rsvp-button"
-    href="https://wa.me/91YOURNUMBER?text=Hello%20Surya%20%26%20Pavithraa%2C%20thank%20you%20for%20the%20invitation!%20We%20would%20love%20to%20RSVP%20for%20your%20wedding."
+    href="https://wa.me/917845414826?text=Hello%20Surya%20%26%20Pavithraa%2C%20thank%20you%20for%20the%20invitation!%20We%20would%20love%20to%20RSVP%20for%20your%20wedding."
     target="_blank"
     rel="noopener noreferrer"
     aria-label="RSVP with love on WhatsApp"
