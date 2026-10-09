@@ -13,31 +13,55 @@ export default function Invitation() {
   const h = (d) => ({ initial: { opacity: 0, y: 24 }, animate: { opacity: 1, y: 0 }, transition: { duration: 0.9, delay: d } });
   return (
     <main className="card">
-      <div className="hero">
-        <img src="/couple.jpg" alt="Bride and groom beside a flower pavilion and lotus pond" />
-        <div className="over">
-          <motion.p className="names script" {...h(0.5)}>Surya Weds Pavithraa</motion.p>
-          <motion.div className="ev" {...h(1.0)}><h2 className="script">Reception</h2><p>Saturday, 31st October 2026</p><p className="t">At 7.00 PM Onwards</p></motion.div>
-          <motion.div className="ev" {...h(1.5)}><h2 className="script">Muhurtham</h2><p>Sunday, 1st November 2026</p><p className="t">6.00 AM – 7.30 AM · Viruchiga Lagnam</p></motion.div>
-          <motion.p className="ven" {...h(2.0)}><b>- Venue -</b>AGH Palace, Ambattur – Puzhal Road,<br />Surapet, Chennai – 66</motion.p>
+
+       {/* TEXT AFTER THE PHOTO */}
+      <section className="wedding-intro">
+        <div className="wedding-content">
+          <Reveal>
+            <img src="/ganesha.png" alt="Lord Ganesha emblem" className="ganesha-emblem" />
+          </Reveal>
+
+          <Reveal delay={0.1}>
+            <p className="intro">
+              As our families unite and a new chapter begins,
+              we warmly invite you to share our happiness.
+            </p>
+          </Reveal>
+
+          <Reveal delay={0.2}>
+            <div className="wedding-heading">
+              <span className="ornament">✦ ───── ✦ ───── ✦</span>
+              <h2>The Wedding Celebration of</h2>
+            </div>
+          </Reveal>
+
+          <Reveal delay={0.3}>
+            <p className="names script">
+              Surya <span className="ampersand">&amp;</span> Pavithraa
+            </p>
+          </Reveal>
+
+          <Reveal delay={0.4}>
+            <div className="wedding-date">
+              <span className="date-line"></span>
+              <p>1 November 2026</p>
+              <span className="date-line"></span>
+            </div>
+          </Reveal>
         </div>
+      </section>
+   
+
+      {/* PHOTO ONLY */}
+      <div className="hero">
+        <img src="/couple.png" alt="Surya and Pavithraa" />
       </div>
-
-      <section>
-        <Reveal><h3 className="script">Counting down to the big day</h3><div className="line" /><Countdown /></Reveal>
-      </section>
-
-      <section className="alt">
-        <Reveal><h3 className="script">Together with our families</h3><div className="line" />
-          <p><b>Mr. T. Ramesh Kumar &amp; Mrs. R. Chithra</b><br />invite you to the marriage of their son</p></Reveal>
-        <Reveal delay={0.1}><p className="who script">R. Surya Rajan</p><p className="sub">BCA, MBA · Senior Software Engineer, Agilisium, WTC, Chennai</p></Reveal>
-        <Reveal delay={0.1}><p className="with">with</p></Reveal>
-        <Reveal delay={0.1}><p className="who script">G. Pavithraa</p><p className="sub">B.Tech · Project Associate, Easy Solutions, Alwarpet, Chennai</p>
-          <p className="sub" style={{ marginTop: 6 }}>D/o Mr. K.S. Ganesh &amp; Mrs. G. Bharathi</p></Reveal>
+         <section>
+        <Reveal><h3 className="script">Our Forever Begins Soon</h3><div className="line" /><Countdown /></Reveal>
       </section>
 
       <section>
-        <Reveal><h3 className="script">Wedding Programme</h3><div className="line" /></Reveal>
+        <Reveal><h3 className="script">The Celebration</h3><div className="line" /></Reveal>
         {W.schedule.map((d) => (
           <Reveal key={d.day}>
             <p className="day">{d.day}</p>
@@ -47,14 +71,44 @@ export default function Invitation() {
       </section>
 
       <section className="alt">
-        <Reveal><h3 className="script">Getting There</h3><div className="line" />
+        <Reveal><h3 className="script">Where Our Forever Begins</h3><div className="line" />
           <p><b>{W.venueName}</b><br />{W.venueLines[0]}<br />{W.venueLines[1]}</p>
           <a className="btn" href={W.mapsUrl} target="_blank" rel="noopener noreferrer">Open in Maps</a>
-          <p className="sub" style={{ marginTop: 12 }}>{W.bus}</p>
-          <p className="contacts">{W.contacts.map((c) => <a key={c.phone} href={`tel:+91${c.phone}`}>{c.name} · {c.phone}</a>)}</p>
-          <p className="sub" style={{ marginTop: 14 }}>With best compliments from R. Nirmal Kumar</p></Reveal>
+        <br></br>
+          
+          </Reveal>
+
       </section>
-      <footer className="foot script">Surya &amp; Pavithraa</footer>
+
+<footer className="foot">
+  <div className="footer-ornament">⌁ ✦ ⌁</div>
+
+  <p className="footer-message">
+    Your presence and blessings
+    <br />
+    will make our celebration
+    <br />
+    truly memorable.
+  </p>
+
+  <p className="footer-with-love">With Love</p>
+
+  <p className="footer-names script">
+    Surya <span>&amp;</span> Pavithraa
+  </p>
+
+  <a
+    className="rsvp-button"
+    href="https://wa.me/91YOURNUMBER?text=Hello%20Surya%20%26%20Pavithraa%2C%20thank%20you%20for%20the%20invitation!%20We%20would%20love%20to%20RSVP%20for%20your%20wedding."
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="RSVP with love on WhatsApp"
+  >
+    <span className="rsvp-icon">♡</span>
+    RSVP WITH LOVE
+    <span className="rsvp-arrow">↗</span>
+  </a>
+</footer>
     </main>
   );
 }

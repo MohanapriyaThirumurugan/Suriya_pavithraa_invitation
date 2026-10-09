@@ -13,8 +13,7 @@ export const WEDDING = {
   ],
   schedule: [
     { day: "Saturday, 31 October 2026", items: [
-      ["Mappillai Azhaippu", "5:00 PM"],
-      ["Nichayathartham", "5:30 PM"],
+      ,
       ["Reception", "7:00 PM onwards"],
     ]},
     { day: "Sunday, 1 November 2026", items: [
